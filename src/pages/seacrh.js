@@ -20,6 +20,9 @@ class SearchForm extends Page {
   async clickseacrhClearBtn() {
     await click(this.seacrhClearBtn);
   }
+  async clickiconMagnifier() {
+    await click(this.iconMagnifier);
+  }
 }
 
 module.exports = new SearchForm();
