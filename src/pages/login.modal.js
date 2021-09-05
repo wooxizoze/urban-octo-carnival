@@ -1,4 +1,5 @@
 const Page = require("./page");
+const { click, setText } = require("../../src/utils/commands");
 
 class LoginModal extends Page {
   get loginInput() {
@@ -21,6 +22,15 @@ class LoginModal extends Page {
   }
   get errorMessage() {
     return $(".input-error-message__message span");
+  }
+  async clickOnSubmitBtn() {
+    await click(this.submitBtn);
+  }
+  async enterEmail(email) {
+    await setText(this.loginInput, email);
+  }
+  async enterPassword(password) {
+    await setText(this.passwordInput, password);
   }
 }
 

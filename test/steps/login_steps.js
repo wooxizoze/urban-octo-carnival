@@ -4,22 +4,22 @@ const LoginModal = require("../../src/pages/login.modal");
 
 Given(/^I on a main page and open login modal window$/, async () => {
   await browser.url("https://www.21vek.by/");
-  await AccountModal.accountBtn.click();
+  await AccountModal.clickOnAccountBtn();
   await AccountModal.loginBtn.waitForDisplayed({ timeout: 3000 });
-  await AccountModal.loginBtn.click();
+  await AccountModal.clickOnLoginBtn();
 });
 
 When(
   /^I enter (.+) and (.+) and click submit button$/,
   async (email, password) => {
-    await LoginModal.loginInput.setValue(email);
-    await LoginModal.passwordInput.setValue(password);
-    await LoginModal.submitBtn.click();
+    await LoginModal.enterEmail(email);
+    await LoginModal.enterPassword(password);
+    await LoginModal.clickOnSubmitBtn();
   }
 );
 
 Then(/^I should see account options with (.+)$/, async (email) => {
-  await AccountModal.accountBtn.click();
+  await AccountModal.clickOnAccountBtn();
   await expect(AccountModal.getAccountInfo()).toBeExisting();
   await expect(AccountModal.getAccountInfo()).toHaveText(email);
 });

@@ -1,4 +1,5 @@
 const Page = require("./page");
+const { click, setText } = require("../../src/utils/commands");
 
 class AccountModal extends Page {
   get accountBtn() {
@@ -29,6 +30,12 @@ class AccountModal extends Page {
   }
   getAccountInfo() {
     return this.accountInfo;
+  }
+  async clickOnAccountBtn() {
+    await click(this.accountBtn);
+  }
+  async clickOnLoginBtn() {
+    await click(this.loginBtn);
   }
 }
 
