@@ -27,6 +27,9 @@ class AccountModal extends Page {
   get accountInfo() {
     return $(".userToolsSubtitle");
   }
+  getAccountInfo() {
+    return this.accountInfo;
+  }
 }
 
 module.exports = new AccountModal();

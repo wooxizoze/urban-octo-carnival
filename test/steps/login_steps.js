@@ -14,11 +14,12 @@ When(
   async (email, password) => {
     await LoginModal.loginInput.setValue(email);
     await LoginModal.passwordInput.setValue(password);
-    await LoginModal.submitBtn.click;
+    await LoginModal.submitBtn.click();
   }
 );
 
 Then(/^I should see account options with (.+)$/, async (email) => {
-  console.log(email);
-  await expect(AccountModal.accountInfo.toHaveText(email));
+  await AccountModal.accountBtn.click();
+  await expect(AccountModal.getAccountInfo()).toBeExisting();
+  await expect(AccountModal.getAccountInfo()).toHaveText(email);
 });
