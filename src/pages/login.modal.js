@@ -1,14 +1,14 @@
-import Page from "./page";
+const Page = require("./page");
 
 class LoginModal extends Page {
   get loginInput() {
     return $("input#login-email");
   }
   get passwordInput() {
-    return $("///input[@label='Пароль']");
+    return $("input[label='Пароль']");
   }
   get submitBtn() {
-    return $("///button[@innertext='Войти']");
+    return $(".style_actions__2mIsz [type]");
   }
   get forgotPasswordBtn() {
     return $("///button[@innertext='Не помню пароль']");
@@ -19,6 +19,9 @@ class LoginModal extends Page {
   get closeLoginModalBtn() {
     return $(".styles_closeModalIcon__2c-f9");
   }
+  get errorMessage() {
+    return $(".input-error-message__message span");
+  }
 }
 
-export default new LoginModal();
+module.exports = new LoginModal();

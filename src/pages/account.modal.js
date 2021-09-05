@@ -1,4 +1,4 @@
-import Page from "./page";
+const Page = require("./page");
 
 class AccountModal extends Page {
   get accountBtn() {
@@ -21,6 +21,12 @@ class AccountModal extends Page {
       "//a[@pathname=" / compare / ']/div[@innertext="Списки сравнения"]'
     );
   }
+  get logoutBtn() {
+    return $(".ProfileItem_itemLogout__1XgF8 .ProfileItem_itemText__Qz7I0");
+  }
+  get accountInfo() {
+    return $(".userToolsSubtitle");
+  }
 }
 
-export default new AccountModal();
+module.exports = new AccountModal();

@@ -1,38 +1,24 @@
-// const Page = require("./page");
+const { Given, When, Then } = require("@cucumber/cucumber");
+const AccountModal = require("../../src/pages/account.modal");
+const LoginModal = require("../../src/pages/login.modal");
 
-// /**
-//  * sub page containing specific selectors and methods for a specific page
-//  */
-// class LoginPage extends Page {
-//   /**
-//    * define selectors using getter methods
-//    */
-//   get inputUsername() {
-//     return $("#username");
-//   }
-//   get inputPassword() {
-//     return $("#password");
-//   }
-//   get btnSubmit() {
-//     return $('button[type="submit"]');
-//   }
+Given(/^I on a main page and open login modal window$/, async () => {
+  await browser.url("https://www.21vek.by/");
+  await AccountModal.accountBtn.click();
+  await AccountModal.loginBtn.waitForDisplayed({ timeout: 3000 });
+  await AccountModal.loginBtn.click();
+});
 
-//   /**
-//    * a method to encapsule automation code to interact with the page
-//    * e.g. to login using username and password
-//    */
-//   async login(username, password) {
-//     await this.inputUsername.setValue(username);
-//     await this.inputPassword.setValue(password);
-//     await this.btnSubmit.click();
-//   }
+When(
+  /^I enter (.+) and (.+) and click submit button$/,
+  async (email, password) => {
+    await LoginModal.loginInput.setValue(email);
+    await LoginModal.passwordInput.setValue(password);
+    await LoginModal.submitBtn.click;
+  }
+);
 
-//   /**
-//    * overwrite specifc options to adapt it to page object
-//    */
-//   open() {
-//     return super.open("login");
-//   }
-// }
-
-// module.exports = new LoginPage();
+Then(/^I should see account options with (.+)$/, async (email) => {
+  console.log(email);
+  await expect(AccountModal.accountInfo.toHaveText(email));
+});
