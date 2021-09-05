@@ -6,7 +6,9 @@ Given(/^I click on search input$/, async () => {
   browser.url("https://www.21vek.by/");
   await SearchForm.clickSearchInput();
 });
-
+Then(/^I assert that the image is present$/, async () => {
+  await expect(SearchResult.resultImg).toBeDisplayed();
+});
 When(/^I type into search \"([^\"]*)\"$/, async (searchText) => {
   await SearchForm.enterSearchText(searchText);
 });
