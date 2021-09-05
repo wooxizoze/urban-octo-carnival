@@ -1,12 +1,25 @@
-import Page from "./page";
+const Page = require("./page");
+const { click, setText } = require("../../src/utils/commands");
 
-class SearchInput extends Page {
+class SearchForm extends Page {
   get searchInput() {
     return $("input#j-search");
   }
   get iconMagnifier() {
     return $(".searchFieldSubmit");
   }
+  get seacrhClearBtn() {
+    return $(".searchFieldClear");
+  }
+  async clickSearchInput() {
+    await click(this.searchInput);
+  }
+  async enterSearchText(searchText) {
+    await setText(this.searchInput, searchText);
+  }
+  async clickseacrhClearBtn() {
+    await click(this.seacrhClearBtn);
+  }
 }
 
-export default new SearchInput();
+module.exports = new SearchForm();
