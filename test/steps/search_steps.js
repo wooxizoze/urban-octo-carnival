@@ -1,6 +1,7 @@
 const { Given, When, Then } = require("@cucumber/cucumber");
 const SearchForm = require("../../src/pages/seacrh");
 const SearchResult = require("../../src/pages/search.results");
+const searchdata = require("../../test/resources/search_fromedata.json");
 
 Given(/^I click on search input$/, async () => {
   browser.url("https://www.21vek.by/");
@@ -12,6 +13,11 @@ Then(/^I assert that there are only one match$/, async () => {
     "Наушники и гарнитуры (1)"
   );
   await expect(SearchResult.searchResultCount).toBeElementsArrayOfSize(1);
+});
+
+Then(/^I assert that the name and price match$/, async () => {
+  await expect(SearchResult.resultPrice).toHaveText(searchdata.price);
+  await expect(SearchResult.resultName).toHaveText(searchdata.name);
 });
 
 Then(/^I assert that the image is present$/, async () => {

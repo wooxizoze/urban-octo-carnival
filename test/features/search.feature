@@ -5,7 +5,7 @@ Feature: Search function
     Scenario: Search with given parameters
         When user press Enter button
         Then I assert that there are only one match
-        #  Then I assert that the specified parameters match
+        Then I assert that the name and price match
         Then I assert that the image is present
         Then I assert that the price is present
     Scenario: Button X clear search input
