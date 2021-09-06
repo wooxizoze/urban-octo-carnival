@@ -147,7 +147,7 @@ exports.config = {
     [
       "allure",
       {
-        outputDir: "allure-results",
+        outputDir: "./test-report/allure-result/",
         disableWebdriverStepsReporting: true,
         useCucumberStepReporter: true,
         disableWebdriverScreenshotsReporting: false,

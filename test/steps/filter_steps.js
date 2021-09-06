@@ -12,6 +12,7 @@
 //     await FilterBar.selectProductBrand(brand);
 //     await FilterBar.selectProductVidocard(videocard);
 //     await FilterBar.selectProductProcessor(processor);
+//     await FilterBar.filterOptions.click();
 //     await FilterBar.clickshowMoreBtn();
 //     await FilterBar.clickshowBtn();
 //   }

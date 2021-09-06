@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "report:generate": "npx allure generate --clean ./test-report/allure-result/ -o ./test-report/allure-report",
+    "report:open": "npx allure open test-report/allure-report"
   },
   "author": "",
   "license": "ISC",

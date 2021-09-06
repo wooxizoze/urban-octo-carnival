@@ -14,11 +14,14 @@ class FilterBar extends Page {
   get productProcessor() {
     return $$("label");
   }
+  get showMoreBtn() {
+    return $$(".cr-filter__unfold .j-plus__toggle");
+  }
   get showBtn() {
     return $("button#j-filter__btn");
   }
-  get showMoreBtn() {
-    return $$("j-plus__toggle g-pseudo_href");
+  get filterOptions() {
+    return $$("b-filter-attr cr-filter__toggle cr-filter__fold");
   }
   async selectProductStatus(status) {
     await selectCheckbox(this.productStatus, status);

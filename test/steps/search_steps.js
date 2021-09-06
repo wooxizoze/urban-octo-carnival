@@ -1,7 +1,7 @@
 const { Given, When, Then } = require("@cucumber/cucumber");
 const SearchForm = require("../../src/pages/seacrh");
 const SearchResult = require("../../src/pages/search.results");
-const searchdata = require("../../test/resources/search_fromedata.json");
+const searchdata = require("../../test/resources/search_data.json");
 
 Given(/^I click on search input$/, async () => {
   browser.url("https://www.21vek.by/");
