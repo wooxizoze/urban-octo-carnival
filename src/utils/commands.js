@@ -13,4 +13,9 @@ const selectCheckbox = async (elements, title) => {
     }
   }
 };
-module.exports = { click, setText, selectCheckbox };
+
+const scrollIntoView = async (element) => {
+  await element.scrollIntoView();
+};
+
+module.exports = { click, setText, selectCheckbox, scrollIntoView };
