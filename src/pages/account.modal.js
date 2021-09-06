@@ -9,7 +9,7 @@ class AccountModal extends Page {
     return $(".userToolsBtn");
   }
   get logoutBtn() {
-    return $(".ProfileItem_itemLogout__1XgF8 .ProfileItem_itemText__Qz7I0");
+    return $(".ProfileItem_itemLogout__1XgF8");
   }
   get accountInfo() {
     return $(".userToolsSubtitle");
@@ -22,6 +22,9 @@ class AccountModal extends Page {
   }
   async clickOnLoginBtn() {
     await click(this.loginBtn);
+  }
+  async clickOnLogoutBtn() {
+    await click(this.logoutBtn);
   }
 }
 

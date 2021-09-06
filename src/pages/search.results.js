@@ -12,5 +12,11 @@ class SearchResults extends Page {
   get resultCount() {
     return $(".b-content > span:nth-child(2)");
   }
+  get searchCountMessage() {
+    return $(".b-recipes__item__link.j-category__link");
+  }
+  get searchResultCount() {
+    return $$(".b-result__inner > li:not(:empty)");
+  }
 }
 module.exports = new SearchResults();

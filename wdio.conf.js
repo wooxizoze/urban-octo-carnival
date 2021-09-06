@@ -114,7 +114,7 @@ exports.config = {
     require("expect-webdriverio").setOptions({ wait: 5000 });
   },
   before() {
-    browser.setWindowSize(1920, 1080);
+    browser.setWindowSize(1280, 720);
   },
   afterStep(uri, feature, scenario) {
     if (scenario.error) {

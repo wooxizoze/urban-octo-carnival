@@ -17,6 +17,9 @@ class LoginModal extends Page {
   get errorMessage() {
     return $(".input-error-message__message span");
   }
+  get loginModalWindow() {
+    return $("div#modal");
+  }
   async clickOnSubmitBtn() {
     await click(this.submitBtn);
   }
@@ -25,6 +28,9 @@ class LoginModal extends Page {
   }
   async enterPassword(password) {
     await setText(this.passwordInput, password);
+  }
+  async clickOnCloseBtn() {
+    await click(this.closeLoginModalBtn);
   }
 }
 
