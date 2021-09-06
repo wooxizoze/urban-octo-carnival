@@ -11,12 +11,6 @@ class LoginModal extends Page {
   get submitBtn() {
     return $(".style_actions__2mIsz [type]");
   }
-  get forgotPasswordBtn() {
-    return $("///button[@innertext='Не помню пароль']");
-  }
-  get signupLink() {
-    return $('///button[@innertext="Регистрация"]');
-  }
   get closeLoginModalBtn() {
     return $(".styles_closeModalIcon__2c-f9");
   }

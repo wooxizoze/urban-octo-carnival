@@ -1,5 +1,5 @@
 const Page = require("./page");
-const { click, setText } = require("../../src/utils/commands");
+const { click } = require("../../src/utils/commands");
 
 class AccountModal extends Page {
   get accountBtn() {
@@ -7,20 +7,6 @@ class AccountModal extends Page {
   }
   get loginBtn() {
     return $(".userToolsBtn");
-  }
-  get basketBtn() {
-    return $("//a[@pathname='/order/']/div[@innertext='Корзина']");
-  }
-  get featuredProductsBtn() {
-    return $("//a[@pathname=" / aside / ']/div[@innertext="Избранные товары"]');
-  }
-  get viewItemsBtn() {
-    return $("//a[@pathname=" / viewed / ']/div[@innertext="Просмотренные"]');
-  }
-  get compareListBtn() {
-    return $(
-      "//a[@pathname=" / compare / ']/div[@innertext="Списки сравнения"]'
-    );
   }
   get logoutBtn() {
     return $(".ProfileItem_itemLogout__1XgF8 .ProfileItem_itemText__Qz7I0");
