@@ -12,7 +12,7 @@ Then(/^I assert that there are only one match$/, async () => {
   await expect(SearchResult.searchCountMessage).toHaveText(
     "Наушники и гарнитуры (1)"
   );
-  await expect(SearchResult.searchResultCount).toBeElementsArrayOfSize(1);
+  await expect(SearchResult.getSearchResultCount()).toBeElementsArrayOfSize(1);
 });
 
 Then(/^I assert that the name and price match$/, async () => {

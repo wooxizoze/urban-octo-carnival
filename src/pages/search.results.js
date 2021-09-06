@@ -9,14 +9,14 @@ class SearchResults extends Page {
   get resultImg() {
     return $(".result__img__inner img");
   }
-  get resultCount() {
-    return $(".b-content > span:nth-child(2)");
-  }
   get searchCountMessage() {
     return $(".b-recipes__item__link.j-category__link");
   }
   get searchResultCount() {
     return $$(".b-result__inner > li:not(:empty)");
+  }
+  getSearchResultCount() {
+    return this.searchResultCount;
   }
 }
 module.exports = new SearchResults();

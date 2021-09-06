@@ -13,7 +13,7 @@ Feature: Search function
         Then search input becomes empty
     Scenario: Enter button should send search request
         When user press Enter button
-    #         Then search request sends
+        Then I assert that the name and price match
     Scenario: Icon magnifier should send search request
         When I click on icon magnifier
-#         Then POST search request should send
+        Then I assert that the name and price match
