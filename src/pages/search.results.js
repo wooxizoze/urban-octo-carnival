@@ -1,20 +1,25 @@
 const Page = require("./page");
 class SearchResults extends Page {
-  get resultName() {
+  get searchResultName() {
     return $(".result__name");
   }
-  get resultPrice() {
+
+  get searchResultPrice() {
     return $(".j-item-data-real5764204");
   }
-  get resultImg() {
+
+  get searchResultImg() {
     return $(".result__img__inner img");
   }
+
   get searchCountMessage() {
     return $(".b-recipes__item__link.j-category__link");
   }
+
   get searchResultCount() {
     return $$(".b-result__inner > li:not(:empty)");
   }
+
   getSearchResultCount() {
     return this.searchResultCount;
   }
