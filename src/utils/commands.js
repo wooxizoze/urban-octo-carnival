@@ -4,4 +4,13 @@ const click = async (element) => {
 const setText = async (element, text) => {
   await element.setValue(text);
 };
-module.exports = { click, setText };
+const selectCheckbox = async (elements, title) => {
+  for (let i = 0; i < (await elements).length; i++) {
+    const elem = await elements[i].getAttribute("title");
+    if (elem == title) {
+      await elements[i].click();
+      break;
+    }
+  }
+};
+module.exports = { click, setText, selectCheckbox };
