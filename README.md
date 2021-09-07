@@ -1,4 +1,5 @@
 # Test automation for 21 vek website
+## Reports
 ### Allure
 
 Run this command to generate the allure report in the directory `./test-report/allure-report`:
