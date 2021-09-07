@@ -20,14 +20,9 @@ const scrollIntoView = async (element) => {
   await element.scrollIntoView();
 };
 
-const waitForClicable = async (element) => {
-  await element.waitForClickable();
-};
-
 module.exports = {
   click,
   setText,
   selectCheckbox,
   scrollIntoView,
-  waitForClicable,
 };

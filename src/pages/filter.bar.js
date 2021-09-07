@@ -3,6 +3,7 @@ const {
   click,
   selectCheckbox,
   scrollIntoView,
+  setText,
 } = require("../../src/utils/commands");
 
 class FilterBar extends Page {
@@ -47,6 +48,101 @@ class FilterBar extends Page {
     return $("button#j-filter__btn");
   }
 
+  //Mobile locators
+  // CSS locator for processor checkboxes (used in mobile foltering)
+  get processorType() {
+    return $$(
+      ".b-filter .filter__attrs:nth-child(4) .b-filter-attr:nth-child(7) .g-form__checklabel"
+    );
+  }
+  //CSS locator for diagonal size labels (used in mobile testing)
+  get diagonalSize() {
+    return $("input[name='filter[2501][from]']");
+  }
+  // CSS locator for body color labels (used in mobile testing)
+  get bodyColor() {
+    return $$(
+      ".b-filter .filter__attrs:nth-child(4) .b-filter-attr:nth-child(15) .g-form__checklabel"
+    );
+  }
+  // CSS locator for memory size (used in mobile testing)
+  get memorySize() {
+    return $$(
+      ".b-filter .filter__attrs:nth-child(4) .b-filter-attr:nth-child(6) .g-form__checklabel"
+    );
+  }
+  // CSS locator for processor type section (used in mobile testing)
+  get processorTypeSection() {
+    return $(
+      "#j-filter__form > div:nth-child(4) > dl:nth-child(7) > dt > span"
+    );
+  }
+  // CSS locator for diagonal section (used in mobile testing)
+  get diagonalSizeSection() {
+    return $("dl:nth-of-type(4) > .filter-attr__name > .g-pseudo_href");
+  }
+  // CSS locator for body color (used in mobile testing)
+  get bodyColorSection() {
+    return $(
+      ".b-filter .filter__attrs:nth-child(4) .b-filter-attr:nth-child(15) .j-filter__fold"
+    );
+  }
+  // Open memory size section
+  get memorySizeSection() {
+    return $(
+      ".b-filter .filter__attrs:nth-child(4) .b-filter-attr:nth-child(6) .j-filter__fold"
+    );
+  }
+
+  // Open processor type section
+  async openProcessorTypeSection() {
+    await click(this.processorTypeSection);
+  }
+  // Open body color section
+  async openBodyColorSection() {
+    await click(this.bodyColorSection);
+  }
+  // Open memory size section
+  async openMemorySizeSection() {
+    await click(this.memorySizeSection);
+  }
+  // Scroll to processor type section
+  async scrollToProcessorTypeSection() {
+    await scrollIntoView(this.processorTypeSection);
+  }
+  // Scroll to diagonal type section
+  async scrollToDiagonalSizeSection() {
+    await scrollIntoView(this.diagonalSizeSection);
+  }
+  // Scroll to memory section
+  async scrollTomemorySectionSection() {
+    await scrollIntoView(this.memorySizeSection);
+  }
+  // Scroll to body color section
+  async scrollBodyColorSection() {
+    await scrollIntoView(this.bodyColorSection);
+  }
+  // Click on diagonal size section
+  async clickOnDiagonalSizeSection() {
+    await click(this.diagonalSizeSection);
+  }
+  // Select processor type (for mobile filtering)
+  async selectProcessorType(mobile_processor) {
+    await selectCheckbox(this.processorType, mobile_processor);
+  }
+  // Set diagonal size
+  async setDiagonalSize(diagonal) {
+    await setText(this.diagonalSize, diagonal);
+  }
+  // Select body color (for mobile filtering)
+  async selectBodyColor(color) {
+    await selectCheckbox(this.bodyColor, color);
+  }
+  // Select memory size (for mobile filtering)
+  async selectMemorySize(memory) {
+    await selectCheckbox(this.memorySize, memory);
+  }
+
   async scrollToProcessorSection() {
     await scrollIntoView(this.processorSection);
   }
@@ -81,7 +177,7 @@ class FilterBar extends Page {
   async selectProductProcessor(processor) {
     await selectCheckbox(this.productProcessor, processor);
   }
-
+  // Click on show button to filter results
   async clickshowBtn() {
     await click(this.showBtn);
   }
