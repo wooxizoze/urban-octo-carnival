@@ -27,6 +27,14 @@ class FilterResults extends Page {
   get filterResultVideoCardName() {
     return $("tbody tr:nth-of-type(8) .result__attr_val");
   }
+  // CCS locator for memory size as a result of filtering
+  get filterMemorySize() {
+    return $("tbody tr:nth-of-type(4) .result__attr_val");
+  }
+  // CCS locator for display size as a result of filtering
+  get filterDisplaySize() {
+    return $("tbody tr:nth-of-type(2) .result__attr_val");
+  }
   // Funtion that return number of product found as a result of filtration
   getFilterResultCount() {
     return this.filterResultCount;
