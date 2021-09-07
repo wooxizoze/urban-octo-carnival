@@ -20,6 +20,8 @@ When(
 
     await FilterBar.scrollToProcessorSection();
     await FilterBar.clickOnprocessorLink();
+
+    await FilterBar.clickShowMoreButtonProcessorSection();
     await FilterBar.selectProductProcessor(processor);
     await FilterBar.clickshowBtn();
   }

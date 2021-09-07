@@ -17,11 +17,16 @@ class FilterBar extends Page {
       ".b-filter .filter__attrs:nth-child(4) .b-filter-attr:nth-child(12) .j-filter__fold"
     );
   }
+
   //Show more link in processor section
-  get processorSectionShowMore() {
+  get showMoreButtonProcessorSection() {
     return $(
       ".b-filter .filter__attrs:nth-child(4) .b-filter-attr:nth-child(12) .j-plus__toggle"
     );
+  }
+
+  async clickShowMoreButtonProcessorSection() {
+    await click(this.showMoreButtonProcessorSection);
   }
   // CSS locators for videocard section (used in notebook filtering)
   get vidocardSection() {
@@ -49,6 +54,7 @@ class FilterBar extends Page {
       ".b-filter .filter__attrs:nth-child(4) .b-filter-attr:nth-child(12) .g-form__checklabel"
     ); // .j-plus__toggle
   }
+
   // CSS locators for show button (get you to filtering results)
   get showBtn() {
     return $("button#j-filter__btn");
