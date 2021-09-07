@@ -17,6 +17,12 @@ class FilterBar extends Page {
       ".b-filter .filter__attrs:nth-child(4) .b-filter-attr:nth-child(12) .j-filter__fold"
     );
   }
+  //Show more link in processor section
+  get processorSectionShowMore() {
+    return $(
+      ".b-filter .filter__attrs:nth-child(4) .b-filter-attr:nth-child(12) .j-plus__toggle"
+    );
+  }
   // CSS locators for videocard section (used in notebook filtering)
   get vidocardSection() {
     return $(
@@ -158,6 +164,7 @@ class FilterBar extends Page {
   async clickOnprocessorLink() {
     await click(this.processorSection);
   }
+
   async clickOnvideocardLink() {
     await click(this.vidocardSection);
   }

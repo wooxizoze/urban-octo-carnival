@@ -1,11 +1,11 @@
-Feature: Filter functionality
+Feature: Filter functionality on mobile page
 
     Scenario Outline: Validate filter results for mobile phones
         Given I am on mobile product page
-        When I filter by parameters <mobile_processor> and <diagonal> and <color> and <memory>
-        Then I assert that there are only one match
-        Then I assert that the specified parameters match
-        Then I assert that the image is present
+        When I filter on mobile product page by parameters <processor> and <diagonal> and <color> and <memory>
+        Then I assert on mobile product page that there are only one match
+        Then I assert on mobile product page that the specified parameters match
+        Then I assert on mobile product page that the image is present
         Examples:
-            | mobile_processor | diagonal | color | memory |
+            | processor        | diagonal | color | memory |
             | Apple A14 Bionic | 6,1      | белый | 128 Гб |
