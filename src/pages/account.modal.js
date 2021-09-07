@@ -15,23 +15,24 @@ class AccountModal extends Page {
   get logoutBtn() {
     return $(".ProfileItem_itemLogout__1XgF8");
   }
-
+  // СSS locator for account info (should have )
   get accountInfo() {
     return $(".userToolsSubtitle");
   }
 
+  // Functions for Account Modal
   getAccountInfo() {
     return this.accountInfo;
   }
-
+  // Function that click on Account button
   async clickOnAccountBtn() {
     await click(this.accountBtn);
   }
-
+  // Function that click on Login button
   async clickOnLoginBtn() {
     await click(this.loginBtn);
   }
-
+  // Function that click on Logout button
   async clickOnLogoutBtn() {
     await click(this.logoutBtn);
   }
