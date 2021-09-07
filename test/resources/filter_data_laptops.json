@@ -1,4 +1,6 @@
 {
-  "name": "'Ноутбук Apple MacBook Pro 16' Touch Bar 2019 512GB / Z0XZ0060T (серый космос)",
-  "price": "7 999,00"
+  "name": "Ноутбук Apple MacBook Pro 16\" Touch Bar 2019 512GB / Z0XZ0060T (серый космос)",
+  "price": "7 999,00",
+  "processor": "Intel Core i7-9750H",
+  "videocard": "AMD Radeon Pro 5500M"
 }

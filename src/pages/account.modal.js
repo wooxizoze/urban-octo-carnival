@@ -2,14 +2,16 @@ const Page = require("./page");
 const { click } = require("../../src/utils/commands");
 
 class AccountModal extends Page {
+  // CSS locators for Account modal window
+  // CCS locator for account button
   get accountBtn() {
     return $(".userToolsText");
   }
-
+  // CCS locator for login button
   get loginBtn() {
     return $(".userToolsBtn");
   }
-
+  // CCS locator for logout button
   get logoutBtn() {
     return $(".ProfileItem_itemLogout__1XgF8");
   }

@@ -6,42 +6,43 @@ const {
 } = require("../../src/utils/commands");
 
 class FilterBar extends Page {
+  // CCS locator for brand section (same for mobile and notebook filtering)
   get brandSection() {
     return $(".j-producers .filter-attr__name");
   }
-
-  get productStatus() {
-    return $$(".b-filter .filter__attrs:nth-child(2) .g-form__checklabel");
-  }
-
-  get productBrand() {
-    return $$(".b-filter .filter__attrs:nth-child(3) .g-form__checklabel");
-  }
-
-  get productVidocard() {
-    return $$(
-      ".b-filter .filter__attrs:nth-child(4) .b-filter-attr:nth-child(18) .g-form__checklabel"
-    ); // .j-plus__toggle
-  }
-
-  get productProcessor() {
-    return $$(
-      ".b-filter .filter__attrs:nth-child(4) .b-filter-attr:nth-child(12) .g-form__checklabel"
-    ); // .j-plus__toggle
-  }
-
+  // CSS selector for processor model (used in notebook filtering)
   get processorSection() {
     return $(
       ".b-filter .filter__attrs:nth-child(4) .b-filter-attr:nth-child(12) .j-filter__fold"
     );
   }
-
+  // CSS locators for videocard section (used in notebook filtering)
   get vidocardSection() {
     return $(
       ".b-filter .filter__attrs:nth-child(4) .b-filter-attr:nth-child(18) .j-filter__fold"
     );
   }
-
+  // CSS locator for label in brand section (same for mobile and notebook filtering)
+  get productBrand() {
+    return $$(".b-filter .filter__attrs:nth-child(3) .g-form__checklabel");
+  }
+  // CSS locators for status section (used in notebook filtering) In stock, request etc
+  get productStatus() {
+    return $$(".b-filter .filter__attrs:nth-child(2) .g-form__checklabel");
+  }
+  // CSS locators for videocard labels (used in notebook filtering) AMD Radeon Pro 5500M etc
+  get productVidocard() {
+    return $$(
+      ".b-filter .filter__attrs:nth-child(4) .b-filter-attr:nth-child(18) .g-form__checklabel"
+    ); // .j-plus__toggle
+  }
+  // CSS locators for processor labels (used in notebook filtering) AMD Athlon etc
+  get productProcessor() {
+    return $$(
+      ".b-filter .filter__attrs:nth-child(4) .b-filter-attr:nth-child(12) .g-form__checklabel"
+    ); // .j-plus__toggle
+  }
+  // CSS locators for show button (get you to filtering results)
   get showBtn() {
     return $("button#j-filter__btn");
   }
