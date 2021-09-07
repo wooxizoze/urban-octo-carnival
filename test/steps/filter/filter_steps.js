@@ -1,8 +1,8 @@
 const { Given, When, Then } = require("@cucumber/cucumber");
-const FilterBar = require("../../src/pages/filter.bar");
-const FilterResults = require("../../src/pages/filter.results");
-const filterdatalaptop = require("../../test/resources/filter_data_laptops.json");
-const filterdatamobile = require("../../test/resources/filter_data_mobile.json");
+const FilterBar = require("../../../src/pages/filter.bar");
+const FilterResults = require("../../../src/pages/filter.results");
+const filterdatalaptop = require("../../resources/filter_data_laptops.json");
+const filterdatamobile = require("../../resources/filter_data_mobile.json");
 
 Given(/^I am on notebooks product page$/, async () => {
   await browser.url("https://www.21vek.by/notebooks/");

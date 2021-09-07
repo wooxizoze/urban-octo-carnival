@@ -1,7 +1,7 @@
 const { Given, When, Then } = require("@cucumber/cucumber");
-const AccountModal = require("../../src/pages/account.modal");
-const loginModal = require("../../src/pages/login.modal");
-const LoginModal = require("../../src/pages/login.modal");
+const AccountModal = require("../../../src/pages/account.modal");
+const loginModal = require("../../../src/pages/login.modal");
+const LoginModal = require("../../../src/pages/login.modal");
 
 Given(/^I on a main page and open login modal window$/, async () => {
   await browser.url("https://www.21vek.by/");
