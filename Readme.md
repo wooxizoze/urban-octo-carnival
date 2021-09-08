@@ -6,6 +6,18 @@
 - Cucumber
 - Page Object Pattern
 - Allure report
+- 
+### Installation
+
+```bash
+npm install
+```
+
+### Installation
+
+```bash
+npm run test
+```
 
 ### Allure
 
