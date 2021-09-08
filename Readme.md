@@ -6,6 +6,7 @@
 - Cucumber
 - Page Object Pattern
 - Allure report
+- Docker
 
 ### Allure
 
