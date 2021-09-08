@@ -8,30 +8,30 @@ const {
 } = require("../../src/utils/commands");
 
 class FilterBar extends Page {
-  // CCS locator for brand section (same for mobile and notebook filtering)
+  // CCS locator for Brand Sections (used in notebook filtering)
+  //
   get brandSection() {
     return $(".j-producers .filter-attr__name");
   }
-  // CSS selector for processor model (used in notebook filtering)
+  //CSS locator for Processor Section (used in notebook filtering)
   get processorSection() {
     return $(
       ".b-filter .filter__attrs:nth-child(4) .b-filter-attr:nth-child(12) .j-filter__fold"
     );
   }
-
-  //Show more link in processor section
-  get showMoreButtonProcessorSection() {
-    return $(
-      ".b-filter .filter__attrs:nth-child(4) .b-filter-attr:nth-child(12) .j-plus__toggle"
-    );
-  }
-
   // CSS locators for videocard section (used in notebook filtering)
   get vidocardSection() {
     return $(
       ".b-filter .filter__attrs:nth-child(4) .b-filter-attr:nth-child(18) .j-filter__fold"
     );
   }
+  //Show more link in processor section (used in notebook filtering)
+  get showMoreButtonProcessorSection() {
+    return $(
+      ".b-filter .filter__attrs:nth-child(4) .b-filter-attr:nth-child(12) .j-plus__toggle"
+    );
+  }
+
   // CSS locator for label in brand section (same for mobile and notebook filtering)
   get productBrand() {
     return $$(".b-filter .filter__attrs:nth-child(3) .g-form__checklabel");
@@ -59,7 +59,7 @@ class FilterBar extends Page {
   }
 
   //Mobile locators
-  // CSS locator for processor checkboxes (used in mobile foltering)
+  // CSS locator for processor checkboxes (used in mobile filtering)
   get processorType() {
     return $$(
       ".b-filter .filter__attrs:nth-child(4) .b-filter-attr:nth-child(7) .g-form__checklabel"
@@ -153,15 +153,15 @@ class FilterBar extends Page {
   async selectMemorySize(memory) {
     await selectCheckbox(this.memorySize, memory);
   }
-
+  // Scroll to Processor Section (used in notebook filtering)
   async scrollToProcessorSection() {
     await scrollIntoView(this.processorSection);
   }
-
+  // Scroll to VideoCard Section (used in notebook filtering)
   async scrollToVideoCardSection() {
     await scrollIntoView(this.vidocardSection);
   }
-
+  // Scroll to Brand Section (used in notebook filtering)
   async scrollToBrandSection() {
     await scrollIntoView(this.brandSection);
   }

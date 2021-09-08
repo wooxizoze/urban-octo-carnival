@@ -3,7 +3,6 @@ const { click } = require("../../src/utils/commands");
 
 class AccountModal extends Page {
   // CSS locators for Account modal window
-  // CCS locator for account button
   get accountBtn() {
     return $(".userToolsText");
   }

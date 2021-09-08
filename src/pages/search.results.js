@@ -1,5 +1,6 @@
 const Page = require("./page");
 class SearchResults extends Page {
+  // CSS locators for Search Result Page
   get searchResultName() {
     return $(".result__name");
   }
