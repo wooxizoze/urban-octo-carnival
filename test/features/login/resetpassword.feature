@@ -1,4 +1,4 @@
-Feature: Forgot password modal window modal window functionality
+Feature: Reset password modal window modal window functionality
 
     Scenario: Verify if I will not be able to login with with empty not data entered
         Given I open login modal

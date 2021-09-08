@@ -1,6 +1,6 @@
 Feature: Filter functionality on notebook page
 
-    Scenario Outline: Validate filter search results for laptops
+    Scenario Outline: Filter results for notebooks page displayed should be relevant to filter keyword
         Given I am on notebooks product page
         When I filter on notebooks product page by <status> and <brand> and <videocard> and <processor>
         Then I assert on notebooks product that there are only one match

@@ -1,6 +1,6 @@
 Feature: Filter functionality on mobile page
 
-    Scenario Outline: Validate filter results for mobile phones
+    Scenario Outline: Filter results for mobile phones page displayed should be relevant to filter keyword
         Given I am on mobile product page
         When I filter on mobile product page by parameters <processor> and <diagonal> and <color> and <memory>
         Then I assert on mobile product page that there are only one match
