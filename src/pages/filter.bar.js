@@ -193,6 +193,9 @@ class FilterBar extends Page {
   async selectProductProcessor(processor) {
     await selectCheckbox(this.productProcessor, processor);
   }
+  async scrollToShowBtn() {
+    await scrollIntoView(this.showBtn);
+  }
   // Click on show button to filter results
   async clickshowBtn() {
     await click(this.showBtn);
