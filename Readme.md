@@ -13,7 +13,7 @@
 npm install
 ```
 
-### Installation
+### Run scenarios
 
 ```bash
 npm run test
