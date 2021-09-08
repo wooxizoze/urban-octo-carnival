@@ -1,3 +1,12 @@
+# Tests with WebDriverIO and Cucumber
+
+## Features
+
+- WebDriverIO
+- Cucumber
+- Page Object Pattern
+- Allure report (screenshots on failure) and Timeline report
+
 ### Allure
 
 Run this command to generate the allure report in the directory `./test-report/allure-report`:

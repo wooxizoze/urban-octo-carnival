@@ -1,5 +1,5 @@
 {
-  "name": "Test cases for 21vek web site",
+  "name": "21vek-webdriverio-cucumber",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
