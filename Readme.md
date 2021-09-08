@@ -6,7 +6,7 @@
 - Cucumber
 - Page Object Pattern
 - Allure report
-- 
+
 ### Installation
 
 ```bash
