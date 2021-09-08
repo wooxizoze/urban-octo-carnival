@@ -32,13 +32,6 @@ When(/^I type into search \"([^\"]*)\"$/, async (searchText) => {
   await SearchForm.enterSearchText(searchText);
 });
 
-When(/^user click on X button$/, async () => {
-  await SearchForm.clickseacrhClearBtn();
-});
-
-Then(/^search input becomes empty$/, async () => {
-  await expect(SearchForm.searchInput).toHaveText("");
-});
 When(/^user press Enter button$/, async () => {
   browser.keys("\uE007");
 });

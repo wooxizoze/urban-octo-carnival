@@ -8,9 +8,6 @@ Feature: Search function
         Then I assert that the name and price match
         Then I assert that the image is present
         Then I assert that the price is present
-    Scenario: Button X clear search input
-        When user click on X button
-        Then search input becomes empty
     Scenario: Enter button should send search request
         When user press Enter button
         Then I assert that the name and price match
