@@ -4,7 +4,10 @@ exports.config = {
   // Runner Configuration
   // ====================
   //
-  //
+  runner: "local",
+  hostname: "localhost",
+  port: 4444,
+  path: "/",
   // ==================
   // Specify Test Files
   // ==================
@@ -55,7 +58,11 @@ exports.config = {
       maxInstances: 1,
       //
       browserName: "chrome",
+      acceptInsecureCerts: true,
       acceptInsecureCerts: false,
+      "goog:chromeOptions": {
+        args: ["--no-sandbox", "--disable-dev-shm-usage", "--headless"],
+      },
       // If outputDir is provided WebdriverIO can capture driver session logs
       // it is possible to configure which logTypes to include/exclude.
       // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
