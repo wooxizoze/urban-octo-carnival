@@ -16,9 +16,11 @@ class FilterResults extends Page {
     );
   }
   // CSS locators for the number of products found as a result of filtration
+
   get filterResultCount() {
     return $$("ul#j-result-page-1 li");
   }
+
   // CSS locators of the processor name found as a result of filtering
   get filterResultProcessorName() {
     return $("tr:nth-of-type(4) > .result__attr_val");

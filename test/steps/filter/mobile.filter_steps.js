@@ -5,7 +5,6 @@ const filterdatamobile = require("../../resources/filter_data_mobile.json");
 
 Given(/^I am on mobile product page$/, async () => {
   await browser.url("https://www.21vek.by/mobile/");
-  await browser.pause();
 });
 
 When(
