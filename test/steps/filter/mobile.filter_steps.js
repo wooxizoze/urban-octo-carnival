@@ -26,6 +26,7 @@ When(
     await FilterBar.openBodyColorSection();
     await FilterBar.selectBodyColor(color);
 
+    await FilterBar.waitShowBtn();
     await FilterBar.clickshowBtn();
   }
 );

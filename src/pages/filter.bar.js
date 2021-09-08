@@ -4,6 +4,7 @@ const {
   selectCheckbox,
   scrollIntoView,
   setText,
+  waitUntilAvilable,
 } = require("../../src/utils/commands");
 
 class FilterBar extends Page {
@@ -25,9 +26,6 @@ class FilterBar extends Page {
     );
   }
 
-  async clickShowMoreButtonProcessorSection() {
-    await click(this.showMoreButtonProcessorSection);
-  }
   // CSS locators for videocard section (used in notebook filtering)
   get vidocardSection() {
     return $(
@@ -138,6 +136,7 @@ class FilterBar extends Page {
   async clickOnDiagonalSizeSection() {
     await click(this.diagonalSizeSection);
   }
+  // Select checkboxes for mobile part
   // Select processor type (for mobile filtering)
   async selectProcessorType(mobile_processor) {
     await selectCheckbox(this.processorType, mobile_processor);
@@ -167,7 +166,11 @@ class FilterBar extends Page {
     await scrollIntoView(this.brandSection);
   }
 
-  async clickOnprocessorLink() {
+  async clickShowMoreButtonProcessorSection() {
+    await click(this.showMoreButtonProcessorSection);
+  }
+
+  async clickOnProcessorSection() {
     await click(this.processorSection);
   }
 
@@ -193,6 +196,9 @@ class FilterBar extends Page {
   // Click on show button to filter results
   async clickshowBtn() {
     await click(this.showBtn);
+  }
+  async waitShowBtn() {
+    await waitUntilAvilable(this.showBtn);
   }
 }
 

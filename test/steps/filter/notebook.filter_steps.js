@@ -19,8 +19,7 @@ When(
     await FilterBar.selectProductVidocard(videocard);
 
     await FilterBar.scrollToProcessorSection();
-    await FilterBar.clickOnprocessorLink();
-
+    await FilterBar.clickOnProcessorSection();
     await FilterBar.clickShowMoreButtonProcessorSection();
     await FilterBar.selectProductProcessor(processor);
     await FilterBar.clickshowBtn();

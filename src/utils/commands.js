@@ -20,9 +20,14 @@ const scrollIntoView = async (element) => {
   await element.scrollIntoView();
 };
 
+const waitUntilAvilable = async (element) => {
+  await element.waitForClickable({ timeout: 5000 });
+};
+
 module.exports = {
   click,
   setText,
   selectCheckbox,
   scrollIntoView,
+  waitUntilAvilable,
 };
