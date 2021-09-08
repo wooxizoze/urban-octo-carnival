@@ -5,7 +5,7 @@
 - WebDriverIO
 - Cucumber
 - Page Object Pattern
-- Allure report (screenshots on failure) and Timeline report
+- Allure report
 
 ### Allure
 
